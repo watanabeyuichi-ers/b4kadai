@@ -8,11 +8,19 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <h1>
-  Welcome to {{title}}!
+  You are {{title}}!
 </h1>
-<h2>{{hero.name}} details!</h2>
-<div><label>id: </label>{{hero.id}}</div>
-
+<h2>Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">>
+    <!-- 各ヒーローを表示する -->
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+<div>
+  <label>name: </label>
+  <input type="text" [(ngModel)]="hero.name">
+</div>
 
 
 
